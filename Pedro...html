@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Obute Chinonso Pedro · Pedro Digital — Creative Developer</title>
+  <meta name="description" content="Obute Chinonso Pedro (Pedro Digital) — self-taught developer building creative digital experiences with web development, AI-assisted coding, and problem-solving.">
+  <meta name="author" content="Obute Chinonso Pedro">
+  <meta name="theme-color" content="#0b0e14">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Obute Chinonso Pedro · Pedro Digital">
+  <meta property="og:description" content="Self-taught developer building creative digital experiences.">
+  <meta property="og:type" content="website">
+
+  <style>
+    /* ---------- RESET & GLOBAL ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0b0e14;
+      background: radial-gradient(circle at 20% 0%, #121a2c 0%, #0a0c12 100%);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #eef2f8;
+      line-height: 1.6;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ---------- TYPOGRAPHY & COLORS ---------- */
+    :root {
+      --bg-dark: #0b0e14;
+      --bg-card: #121a26;
+      --bg-elevated: #1a2332;
+      --electric-blue: #2f8aff;
+      --electric-glow: #2f8aff80;
+      --violet: #a177ff;
+      --violet-soft: #b599ff;
+      --text-primary: #f0f4fe;
+      --text-secondary: #b0c2da;
+      --text-muted: #8899b0;
+      --border-subtle: #253040;
+      --border-light: #2e3d52;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --radius-lg: 28px;
+      --shadow-glow: 0 8px 32px rgba(47, 138, 255, 0.12);
+      --transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 6vw, 2.5rem);
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fff 0%, #c7d9ff 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5rem 0;
+      border-bottom: 1px solid #19212e;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    /* ---------- BUTTONS ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.8rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+      transition: var(--transition);
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: transparent;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(105deg, #1e6ef0, #3d8aff);
+      box-shadow: 0 4px 20px #1e6ef033;
+      border: 1px solid #4a8eff;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(105deg, #2f7cff, #5a9aff);
+      box-shadow: 0 8px 26px #2f8aff55;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #2f8aff;
+      color: #d0e2ff;
+      background: #2f8aff0d;
+    }
+
+    .btn-outline:hover {
+      background: #2f8aff1a;
+      border-color: #5a9aff;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-small {
+      padding: 0.55rem 1.3rem;
+      font-size: 0.9rem;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      background: rgba(9, 12, 20, 0.8);
+      border-bottom: 1px solid #1e2a3a;
+      padding: 0.9rem 0;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(to right, #ffffff, #aaccff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .logo span {
+      color: #2f8aff;
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      font-weight: 500;
+      color: #c7d3e6;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      position: relative;
+      padding: 0.2rem 0;
+      color: #c7d3e6;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #2f8aff, #a177ff);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      margin-left: 0.5rem;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      display: flex;
+      align-items: center;
+      min-height: 85vh;
+      padding: 2rem 0 4rem;
+      border-bottom: 1px solid #19212e;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .hero-brand {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #7c9bcc;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 9vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      background: linear-gradient(145deg, #f0f6ff, #bfd6ff, #c7b0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 0.25rem 0;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #b0c2da;
+      max-width: 550px;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .code-window {
+      width: 100%;
+      max-width: 380px;
+      background: #0e141e;
+      border-radius: 24px;
+      border: 1px solid #253248;
+      box-shadow: 0 25px 50px -8px #00000080, 0 0 0 1px #2f8aff1a inset;
+      padding: 1.4rem 1.4rem 1.8rem;
+      transition: var(--transition);
+      backdrop-filter: blur(4px);
+    }
+
+    .code-window:hover {
+      border-color: #2f8aff66;
+      box-shadow: 0 30px 60px -12px #2f8aff22;
+      transform: scale(1.01);
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 0.45rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .window-dots span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #2e3d52;
+    }
+
+    .window-dots span:nth-child(1) { background: #ff5f56; }
+    .window-dots span:nth-child(2) { background: #ffbd2e; }
+    .window-dots span:nth-child(3) { background: #27c93f; }
+
+    .code-line {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: #b0c9f0;
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.25rem 0;
+      border-left: 2px solid #2f8aff33;
+      padding-left: 0.75rem;
+      margin: 0.4rem 0;
+    }
+
+    .code-line .comment { color: #6c86a8; }
+    .code-line .keyword { color: #c792ff; }
+    .code-line .string { color: #7bd88f; }
+    .code-line .func { color: #6ab0ff; }
+
+    /* ---------- ABOUT ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: #c2d2e8;
+      margin-bottom: 1.4rem;
+      font-size: 1rem;
+    }
+
+    .about-headline {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #e0eaff;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-headline i {
+      font-style: normal;
+      font-size: 2rem;
+    }
+
+    .about-quote {
+      background: #121e2e;
+      border-left: 4px solid #2f8aff;
+      padding: 1.5rem 1.8rem;
+      border-radius: 16px;
+      border: 1px solid #253248;
+      border-left-width: 5px;
+      margin-top: 1.8rem;
+    }
+
+    .about-quote p {
+      font-style: italic;
+      color: #d0e0ff;
+      font-size: 1.05rem;
+      margin-bottom: 0;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-category {
+      background: #101825;
+      border: 1px solid #223040;
+      border-radius: 24px;
+      padding: 2rem 1.8rem;
+      transition: var(--transition);
+    }
+
+    .skill-category:hover {
+      border-color: #2f8aff66;
+      background: #121e2e;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 30px -15px #2f8aff1a;
+    }
+
+    .skill-category h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #e7efff;
+    }
+
+    .skill-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .badge {
+      background: #1a2538;
+      border: 1px solid #2e405a;
+      padding: 0.45rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #c7d6f0;
+      transition: var(--transition);
+    }
+
+    .badge:hover {
+      background: #1f2e48;
+      border-color: #4d7bc0;
+      color: white;
+    }
+
+    /* ---------- PROJECTS ---------- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: #101825;
+      border: 1px solid #1f2e40;
+      border-radius: 24px;
+      padding: 1.8rem 1.8rem 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      border-color: #2f8aff88;
+      background: #111c2b;
+      transform: translateY(-6px);
+      box-shadow: 0 30px 40px -20px #00000060;
+    }
+
+    .project-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+      color: #2f8aff;
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: #ecf3ff;
+    }
+
+    .project-card p {
+      color: #a9bcd6;
+      margin-bottom: 1.6rem;
+      flex: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tag {
+      background: #1b2a3e;
+      padding: 0.25rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #aac4f0;
+      letter-spacing: 0.2px;
+      border: 1px solid #29405c;
+    }
+
+    /* ---------- CAREER GOALS ---------- */
+    .career-card {
+      background: linear-gradient(120deg, #101b2b, #0e1725);
+      border: 1px solid #22344e;
+      border-radius: 36px;
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+      box-shadow: 0 0 0 1px #2f8aff0d, 0 20px 40px -12px #00000050;
+    }
+
+    .career-card h2 {
+      margin-bottom: 1.2rem;
+    }
+
+    .career-card p {
+      font-size: 1.15rem;
+      color: #c4d5f0;
+      max-width: 620px;
+      margin: 0 auto 2rem;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .contact-info p {
+      color: #b6c8e2;
+      margin: 1rem 0 2rem;
+    }
+
+    .contact-details {
+      background: #131f30;
+      border: 1px solid #2c4058;
+      border-radius: 20px;
+      padding: 1.6rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.8rem 0;
+    }
+
+    .contact-details a,
+    .contact-details div {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      color: #c6d8f2;
+      font-size: 0.98rem;
+      word-break: break-word;
+    }
+
+    .contact-details a:hover {
+      color: #2f8aff;
+    }
+
+    .contact-details i {
+      font-style: normal;
+      font-size: 1.3rem;
+      opacity: 0.9;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #b0c4e0;
+      letter-spacing: 0.3px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      background: #0e1622;
+      border: 1px solid #25384e;
+      border-radius: 14px;
+      padding: 0.9rem 1.2rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: white;
+      transition: var(--transition);
+      outline: none;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #2f8aff;
+      box-shadow: 0 0 0 3px #2f8aff25;
+      background: #111e2e;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: #889bb5;
+      margin-top: 0.6rem;
+      padding: 0.8rem 1rem;
+      background: #0f1a28;
+      border-radius: 12px;
+      border-left: 4px solid #a177ff;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      padding: 3rem 0 2rem;
+      border-top: 1px solid #1c2638;
+      background: #080b10;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      color: #96a9c4;
+      margin: 0.8rem 0 0;
+      font-size: 0.95rem;
+      max-width: 280px;
+    }
+
+    .footer-tagline {
+      font-weight: 400;
+      color: #a9bde0;
+      font-size: 0.95rem;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-links h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #d3e2ff;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      color: #9db1ce;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: #2f8aff;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: #9db1ce;
+    }
+
+    .footer-contact a:hover {
+      color: #2f8aff;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #1b2537;
+      color: #7086a6;
+      font-size: 0.85rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .nav-container {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 1.2rem;
+      }
+
+      .nav-cta {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 3.5rem 0;
+      }
+
+      .container {
+        padding: 0 1.2rem;
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .career-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .skill-category {
+        padding: 1.5rem;
+      }
+
+      .project-card {
+        padding: 1.5rem;
+      }
+
+      .code-window {
+        max-width: 100%;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        white-space: normal;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    /* ---------- ACCESSIBILITY & FOCUS ---------- */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid #2f8aff;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* subtle animations */
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-content > * {
+      animation: fadeUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .hero-content > *:nth-child(1) { animation-delay: 0.05s; }
+    .hero-content > *:nth-child(2) { animation-delay: 0.15s; }
+    .hero-content > *:nth-child(3) { animation-delay: 0.25s; }
+    .hero-content > *:nth-child(4) { animation-delay: 0.35s; }
+    .hero-content > *:nth-child(5) { animation-delay: 0.45s; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container nav-container">
+      <div class="logo">
+        <span>⌨</span> Pedro Digital
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta"><a href="#contact" class="btn btn-primary btn-small">Hire Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-brand">OBUTE CHINONSO PEDRO</div>
+        <h1>Building Creative<br>Digital Experiences.</h1>
+        <p>
+          I'm a self-taught developer passionate about web development, creative problem-solving,
+          and using technology to bring ideas to life.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-window" aria-hidden="true">
+          <div class="window-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="code-line"><span class="comment">// building ideas into code</span></div>
+          <div class="code-line"><span class="keyword">const</span> <span class="func">pedro</span> = {</div>
+          <div class="code-line">&nbsp;&nbsp;role: <span class="string">'creative developer'</span>,</div>
+          <div class="code-line">&nbsp;&nbsp;focus: <span class="string">'web & AI'</span>,</div>
+          <div class="code-line">&nbsp;&nbsp;curious: <span class="keyword">true</span></div>
+          <div class="code-line">};</div>
+          <div class="code-line"><span class="comment">// stay curious, keep building</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="about-headline">
+            <i>👋</i> Meet Pedro — The Developer Behind Pedro Digital
+          </div>
+          <p>
+            I'm a self-taught developer with a passion for web development, creative digital experiences,
+            and solving problems with technology. I enjoy turning ideas into functional, visually appealing
+            websites and continuously improving my skills through hands-on practice.
+          </p>
+          <p>
+            My technical skills include HTML, CSS, JavaScript, PHP, and MySQL. I also work on debugging code,
+            modifying existing websites, and using AI tools to support development. I can review, understand,
+            edit, and troubleshoot AI-generated code rather than simply relying on generated results.
+          </p>
+          <p>
+            Beyond web development, I have knowledge of graphic design and can work with Microsoft Word and
+            PowerPoint. I enjoy exploring creative ways to present information and build digital experiences
+            that are both useful and engaging.
+          </p>
+          <p>
+            I'm currently focused on growing as a developer, building projects that demonstrate my abilities,
+            and securing a job or internship where I can gain practical experience, learn from others, and
+            contribute to real projects.
+          </p>
+        </div>
+        <div>
+          <div class="about-quote">
+            <p>My approach: Stay curious, keep learning, build with purpose, and turn ideas into meaningful digital experiences.</p>
+          </div>
+          <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+            <span style="background: #131f30; padding: 0.7rem 1.4rem; border-radius: 40px; border: 1px solid #25384e; font-size: 0.9rem;">🔍 Detail-oriented</span>
+            <span style="background: #131f30; padding: 0.7rem 1.4rem; border-radius: 40px; border: 1px solid #25384e; font-size: 0.9rem;">🧠 AI-assisted</span>
+            <span style="background: #131f30; padding: 0.7rem 1.4rem; border-radius: 40px; border: 1px solid #25384e; font-size: 0.9rem;">🎨 Creative</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>💻 Web development</h3>
+          <div class="skill-badges">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">PHP</span>
+            <span class="badge">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>⚙️ Development & problem-solving</h3>
+          <div class="skill-badges">
+            <span class="badge">Code debugging</span>
+            <span class="badge">Website modification & customization</span>
+            <span class="badge">Frontend development</span>
+            <span class="badge">AI-assisted coding</span>
+            <span class="badge">AI Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>🎨 Creative & productivity</h3>
+          <div class="skill-badges">
+            <span class="badge">Graphic design knowledge</span>
+            <span class="badge">Microsoft Word</span>
+            <span class="badge">Microsoft PowerPoint</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-icon">🛒</div>
+          <h3>Supermarket Management System</h3>
+          <p>
+            A web development project focused on a supermarket management system.
+            Explore the live project to see the implementation.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Web app</span>
+            <span class="project-tag">Management</span>
+          </div>
+          <a href="https://v0-supermarket-management-system-beta.vercel.app/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-outline btn-small">
+            View Live Project ↗
+          </a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-icon">🏪</div>
+          <h3>Multi-Vendor Marketplace</h3>
+          <p>
+            A web project exploring a multi-vendor marketplace concept.
+            Visit the live version to explore the interface and implementation.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Marketplace</span>
+            <span class="project-tag">Next.js</span>
+          </div>
+          <a href="https://v0-next-js-local-storage.vercel.app/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-outline btn-small">
+            View Live Project ↗
+          </a>
+        </div>
+      </div>
+      <p style="margin-top: 2rem; color: #8a9fc0; font-size: 0.95rem; text-align: center; opacity: 0.8;">
+        More projects coming soon — built with curiosity and purpose.
+      </p>
+    </div>
+  </section>
+
+  <!-- CAREER GOALS -->
+  <section id="career">
+    <div class="container">
+      <div class="career-card">
+        <h2>Open to Opportunities</h2>
+        <p>
+          I'm looking for a job or internship where I can apply my web development skills,
+          learn from experienced professionals, contribute to meaningful projects, and
+          continue growing as a developer.
+        </p>
+        <a href="#contact" class="btn btn-primary">Let's Connect</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p style="font-size: 1.1rem; color: #cfdefa;">
+            I'd love to discuss job or internship opportunities, collaborations,
+            or just talk about web development and AI-assisted coding.
+          </p>
+
+          <div class="contact-details">
+            <a href="mailto:obutedonpedro@gmail.com">
+              <i>📧</i>
+              <span>obutedonpedro@gmail.com</span>
+            </a>
+            <a href="https://wa.me/2349132333461" target="_blank" rel="noopener noreferrer">
+              <i>💬</i>
+              <span>WhatsApp: +2349132333461</span>
+            </a>
+            <a href="https://github.com/obutepedro11" target="_blank" rel="noopener noreferrer">
+              <i>🐙</i>
+              <span>github.com/obutepedro11</span>
+            </a>
+            <div>
+              <i>📍</i>
+              <span>Available for remote and on-site opportunities</span>
+            </div>
+          </div>
+
+          <p style="color: #8ea3c2; font-size: 0.9rem; font-style: italic;">
+            Feel free to reach out via email, WhatsApp, or GitHub — I usually respond quickly.
+          </p>
+        </div>
+
+        <form class="contact-form" action="mailto:obutedonpedro@gmail.com" method="POST" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Opportunity / Collaboration">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell me about the opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          <div class="form-note">
+            ⚡ This form opens your default email app to send the message to
+            <strong>obutedonpedro@gmail.com</strong>. For a fully embedded experience,
+            connect it to a backend service like Formspree or EmailJS.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="font-size: 1.7rem;">
+            <span>⌨</span> Pedro Digital
+          </div>
+          <p class="footer-tagline">Creative Ideas. Thoughtful Code. Digital Experiences.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <div class="footer-contact">
+            <a href="mailto:obutedonpedro@gmail.com">📧 obutedonpedro@gmail.com</a>
+            <a href="https://wa.me/2349132333461" target="_blank" rel="noopener noreferrer">💬 WhatsApp: +2349132333461</a>
+            <a href="https://github.com/obutepedro11" target="_blank" rel="noopener noreferrer">🐙 github.com/obutepedro11</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        © <span id="year"></span> Obute Chinonso Pedro · Pedro Digital. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === "#" || href === "") return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
